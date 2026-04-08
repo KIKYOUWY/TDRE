@@ -13,6 +13,10 @@ This is an ultra-lightweight, plug-and-play machine-oriented visual filter speci
 🚀 Quick Start
 We have provided a ready-to-run inference script, along with pre-trained weights and sample test data. Simply execute the script below to instantly view the restoration and enhancement results:
 
+```bash
+python inference.py
+```
+
 ## Abstract
 ![](Figs/introduction.png)
 ## PipLine
