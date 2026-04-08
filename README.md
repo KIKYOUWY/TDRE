@@ -14,7 +14,7 @@ This is an ultra-lightweight, plug-and-play machine-oriented visual filter speci
 ## PipLine
 ![](Figs/pipline.png) 
 ## Experiment
-![](Figs/comparison graph.png)
+![](Figs/comparisongraph.png)
 
 
 
