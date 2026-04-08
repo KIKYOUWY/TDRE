@@ -9,6 +9,10 @@ This is an ultra-lightweight, plug-and-play machine-oriented visual filter speci
 🎯 Task-Driven Synergy: Discards blind global reconstruction by innovatively utilizing spatial masks guided by detection labels. This forces the network to concentrate its limited computational capacity entirely on amplifying high-frequency features in target regions, explicitly resolving the "task inconsistency" problem.
 
 🛡️ Zero-Interference Bypass: Introduces a novel "Clear-Sky Perceptron" acting as a reliable hard gate. It seamlessly bypasses undegraded clear images, fundamentally eradicating the risk of "catastrophic forgetting" caused by domain shifts.
+
+🚀 Quick Start
+We have provided a ready-to-run inference script, along with pre-trained weights and sample test data. Simply execute the script below to instantly view the restoration and enhancement results:
+
 ## Abstract
 ![](Figs/introduction.png)
 ## PipLine
