@@ -23,6 +23,7 @@ python inference.py
 ![](Figs/pipline.png) 
 ## Experiment
 ![](Figs/comparisongraph.png)
+![](Figs/detectionperference.png)
 
 
 
