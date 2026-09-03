@@ -60,6 +60,16 @@ python inference.py --weights weight/weight.pth --image example/test_foggy.jpg -
 
 The script outputs the original image, the restored image, and the enhanced image.
 
+### Example Results
+
+The following examples show the original input and the final enhanced output produced by TDRE:
+
+| Weather condition | Original input | Enhanced output |
+| --- | --- | --- |
+| Low-light | <img src="example/test_lowlight.jpg" alt="Original low-light image" width="360"> | <img src="example/enhanced_lowlight.png" alt="Enhanced low-light image" width="360"> |
+| Foggy | <img src="example/test_foggy.jpg" alt="Original foggy image" width="360"> | <img src="example/enhanced_foggy.png" alt="Enhanced foggy image" width="360"> |
+| Dusty | <img src="example/test_dusty.jpg" alt="Original dusty image" width="360"> | <img src="example/enhanced_dusty.png" alt="Enhanced dusty image" width="360"> |
+
 ### Training
 
 ```bash

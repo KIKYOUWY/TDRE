@@ -41,6 +41,12 @@ def main(args):
     clean_img = tensor_to_image(clean_tensor)
     enhance_img = tensor_to_image(enhance_tensor)
 
+    if args.save_path:
+        save_dir = os.path.dirname(args.save_path)
+        if save_dir:
+            os.makedirs(save_dir, exist_ok=True)
+        enhance_img.save(args.save_path)
+
     fig, axes = plt.subplots(1, 3, figsize=(15, 5))
 
     axes[0].imshow(orig_img)
@@ -56,9 +62,12 @@ def main(args):
     axes[2].axis('off')
 
     plt.tight_layout()
-    if args.save_path:
-        plt.savefig(args.save_path, dpi=300, bbox_inches='tight')
-    else:
+    if args.preview_path:
+        preview_dir = os.path.dirname(args.preview_path)
+        if preview_dir:
+            os.makedirs(preview_dir, exist_ok=True)
+        plt.savefig(args.preview_path, dpi=300, bbox_inches='tight')
+    elif not args.save_path:
         plt.show()
 
 
@@ -68,5 +77,6 @@ if __name__ == "__main__":
     parser.add_argument('--image', type=str, default='example/test_foggy.jpg')
     parser.add_argument('--img_size', type=int, default=512)
     parser.add_argument('--save_path', type=str, default='')
+    parser.add_argument('--preview_path', type=str, default='')
     args = parser.parse_args()
     main(args)
