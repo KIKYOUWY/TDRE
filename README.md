@@ -4,11 +4,14 @@
 
 **Accepted by the ISPRS Journal of Photogrammetry and Remote Sensing**
 
+[Paper on ScienceDirect](https://www.sciencedirect.com/science/article/pii/S0924271626004387) | [Repository](https://github.com/KIKYOUWY/TDRE)
+
 <a href="#updates">Updates</a> | <a href="#overview">Overview</a> | <a href="#results">Results</a> | <a href="#checkpoint">Checkpoint</a> | <a href="#quick-start">Quick Start</a> | <a href="#datasets">Datasets</a> | <a href="#citation">Citation</a>
 
 </div>
 
 > TDRE is a plug-and-play enhancer for UAV detection under fog, dust, and low-light conditions. It preserves task-relevant structure and keeps the downstream detector fixed.
+> This repository includes the inference code, pretrained checkpoint, and sample outputs for the paper above.
 
 ## Updates
 
@@ -23,6 +26,12 @@ TDRE is a lightweight image enhancement framework for UAV object detection under
 - **Stage 1:** clear-sky gate learning for clear versus degraded images.
 - **Stage 2:** dynamic routing with multi-space restoration in RGB, HSV, and LAB.
 - **Stage 3:** detection-region masked restoration using VOC bounding boxes.
+
+Key properties:
+
+- Single-image inference with a provided checkpoint.
+- Clear, foggy, dusty, and low-light sample inputs.
+- Direct saving of the final enhanced output for comparison and reporting.
 
 The model routes foggy, dusty, and low-light images through expert branches, while clear images bypass the routing path directly.
 
@@ -55,10 +64,10 @@ pip install -r requirements.txt
 ### Inference
 
 ```bash
-python inference.py --weights weight/weight.pth --image example/test_foggy.jpg --save_path results/demo.png
+python inference.py --weights weight/weight.pth --image example/test_foggy.jpg --save_path example/enhanced_foggy.png
 ```
 
-The script outputs the original image, the restored image, and the enhanced image.
+The script outputs the original image, the restored image, and the enhanced image. Use `--preview_path` if you also want the three-panel preview saved as a figure.
 
 ### Example Results
 
@@ -148,7 +157,9 @@ Annotations are read from VOC `xml` files.
 
 ## Citation
 
-Please cite the paper once the final journal metadata is available.
+Paper link: [ScienceDirect article](https://www.sciencedirect.com/science/article/pii/S0924271626004387)
+
+Please cite the journal article using the metadata shown on the paper page.
 
 ## Repository Layout
 
