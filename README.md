@@ -161,6 +161,10 @@ Paper link: [ScienceDirect article](https://www.sciencedirect.com/science/articl
 
 Please cite the journal article using the metadata shown on the paper page.
 
+## Contact
+
+Email: [2024282140091@whu.edu.cn](mailto:2024282140091@whu.edu.cn)
+
 ## Repository Layout
 
 - `TDRE.py`: model definition.
